@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --light-blue: hsl(184, 100%, 22%);
+  --dark-blue: hsl(179, 100%, 13%);
+  --white: hsla(0, 0%, 100%, 0.75);
+  --gray: hsl(0, 0%, 95%);
+  --big: "Big Shoulders Display", cursive;
+  --lex: "Lexend Deca", sans-serif;
+}
+
+body {
+  font-size: 15px;
+  background-color: var(--gray);
+}
+
+main {
+  margin: 45px 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  font-family: var(--lex);
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: var(--big);
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+p {
+  line-height: 1.8;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 50px;
+  color: var(--white);
+  letter-spacing: 0.2px;
+}
+
+#sedan {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#suv {
+  background-color: var(--light-blue);
+}
+#luxury {
+  background-color: var(--dark-blue);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#sedanimg {
+  background-image: url(images/icon-sedans.svg);
+  height: 50px;
+  background-repeat: no-repeat;
+}
+#suvimg {
+  background-image: url(images/icon-suvs.svg);
+  height: 50px;
+  background-repeat: no-repeat;
+}
+#luxuryimg {
+  background-image: url(images/icon-luxury.svg);
+  height: 50px;
+  background-repeat: no-repeat;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--gray);
+  border: none;
+  font-size: 1rem;
+}
+
+#sedanbtn {
+  color: var(--bright-orange);
+}
+
+#sedanbtn:active {
+  background-color: var(--bright-orange);
+  color: var(--gray);
+  border: 1px solid;
+  border-color: var(--gray);
+}
+
+#suv button {
+  color: var(--light-blue);
+}
+
+#suvbtn:active {
+  background-color: var(--light-blue);
+  color: var(--gray);
+  border: 1px solid;
+  border-color: var(--gray);
+}
+
+#luxury button {
+  color: var(--dark-blue);
+}
+
+#luxurybtn:active {
+  background-color: var(--dark-blue);
+  color: var(--gray);
+  border: 1px solid;
+  border-color: var(--gray);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 770px) {
+  main {
+    flex-direction: row;
+    height: 100vh;
+    margin: 0;
+  }
+
+  article {
+    width: 220px;
+    height: 475px;
+  }
+
+  #sedan {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+
+  #luxury {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+
+  article p {
+    margin-bottom: 100px;
+  }
+}
